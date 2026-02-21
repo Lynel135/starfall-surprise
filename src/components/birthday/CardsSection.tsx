@@ -7,7 +7,7 @@ interface CardsSectionProps {
   onAllDone: () => void;
 }
 
-const prayerText = `Semoga Allah SWT senantiasa memberikanmu kebahagiaan yang tak terhingga, kesehatan yang berlimpah, dan rezeki yang penuh berkah. Semoga setiap langkahmu dipenuhi cahaya, setiap doamu diijabah, dan setiap mimpimu menjadi kenyataan. Di usia yang baru ini, semoga kamu semakin bersinar, semakin kuat, dan semakin dicintai oleh orang-orang di sekitarmu. 🤍✨`;
+const prayerText = `Semoga Allah SWT senantiasa memberikan erry kebahagiaan yang tak terhingga, kesehatan yang berlimpah, dan rezeki yang penuh berkah. Semoga setiap langkah dipenuhi cahaya, setiap doa erry diijabah, dan setiap mimpi menjadi kenyataan. Di usia yang baru ini, semoga erry semakin baik, semakin kuat, dan semakin dicintai oleh orang-orang di sekitar erry. 🤍✨`;
 
 const CardsSection = ({ onAllDone }: CardsSectionProps) => {
   const [openCard, setOpenCard] = useState<number | null>(null);

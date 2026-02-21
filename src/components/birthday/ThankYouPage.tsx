@@ -69,7 +69,7 @@ const ThankYouPage = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
       >
-        Dibuat dengan 💖 khusus untukmu
+        Dibuat dengan effort khusus untuk erry😸
       </motion.p>
     </motion.div>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 interface CardsSectionProps {
   onAllDone: () => void;
@@ -17,15 +18,25 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
   const [prayerRevealed, setPrayerRevealed] = useState(false);
   const [typedText, setTypedText] = useState("");
 
-  const handleSendHarapan = () => {
+  const handleSendHarapan = async () => {
     if (!harapan.trim()) return;
+    try {
+      await emailjs.send("service_dbjyg1m", "template_7vgr6yu", { harapan }, "TTCaRwrq9VGFDO5e3");
+    } catch (e) {
+      console.error("EmailJS error:", e);
+    }
     setSentHarapan(true);
     setOpenCard(null);
     checkAllDone(true, sentPesan);
   };
 
-  const handleSendPesan = () => {
+  const handleSendPesan = async () => {
     if (!pesan.trim()) return;
+    try {
+      await emailjs.send("service_dbjyg1m", "template_e91ghfi", { pesan }, "TTCaRwrq9VGFDO5e3");
+    } catch (e) {
+      console.error("EmailJS error:", e);
+    }
     setSentPesan(true);
     setOpenCard(null);
     checkAllDone(sentHarapan, true);

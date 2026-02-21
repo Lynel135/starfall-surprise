@@ -61,7 +61,7 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
 
   const cards = [
     {
-      title: "Harapan Untukmu ✨",
+      title: "Harapan-Mu Tahun Ini✨",
       color: "gold" as const,
       sent: sentHarapan,
     },
@@ -71,7 +71,7 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
       sent: false,
     },
     {
-      title: "Pesan Rahasia 💌",
+      title: "Pesan Buat Aku 😁",
       color: "blue" as const,
       sent: sentPesan,
     },
@@ -101,7 +101,7 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        Ada 3 hal spesial untukmu 🎁
+        Ada hal spesial untukmu 🎁
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
@@ -168,7 +168,7 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
               {/* Harapan card */}
               {openCard === 0 && !sentHarapan && (
                 <>
-                  <h3 className="font-display text-2xl text-primary mb-4">Harapan Untukmu ✨</h3>
+                  <h3 className="font-display text-2xl text-primary mb-4">Harapan-Mu Tahun Ini ✨</h3>
                   <textarea
                     value={harapan}
                     onChange={(e) => setHarapan(e.target.value)}
@@ -213,7 +213,7 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
               {/* Pesan card */}
               {openCard === 2 && !sentPesan && (
                 <>
-                  <h3 className="font-display text-2xl text-accent mb-4">Pesan Rahasia 💌</h3>
+                  <h3 className="font-display text-2xl text-accent mb-4">Pesan Buat Aku😁</h3>
                   <textarea
                     value={pesan}
                     onChange={(e) => setPesan(e.target.value)}
@@ -226,7 +226,7 @@ const CardsSection = ({ onAllDone }: CardsSectionProps) => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    Kirim 💌
+                    Kirim 💤
                   </motion.button>
                 </>
               )}

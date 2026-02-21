@@ -1,11 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import ParticleBackground from "@/components/birthday/ParticleBackground";
+import LandingSection from "@/components/birthday/LandingSection";
+import CakeAnimation from "@/components/birthday/CakeAnimation";
+import CardsSection from "@/components/birthday/CardsSection";
+import SurpriseSection from "@/components/birthday/SurpriseSection";
+import ThankYouPage from "@/components/birthday/ThankYouPage";
+
+type Phase = "landing" | "cake" | "cards" | "surprise" | "thankyou";
 
 const Index = () => {
+  const [phase, setPhase] = useState<Phase>("landing");
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative min-h-screen gradient-dark-bg overflow-hidden">
+      <ParticleBackground />
+      <div className="relative z-10">
+        <AnimatePresence mode="wait">
+          {phase === "landing" && (
+            <LandingSection key="landing" onStart={() => setPhase("cake")} />
+          )}
+          {phase === "cake" && (
+            <CakeAnimation key="cake" onComplete={() => setPhase("cards")} />
+          )}
+          {phase === "cards" && (
+            <CardsSection key="cards" onAllDone={() => setPhase("surprise")} />
+          )}
+          {phase === "surprise" && (
+            <SurpriseSection key="surprise" onNext={() => setPhase("thankyou")} />
+          )}
+          {phase === "thankyou" && (
+            <ThankYouPage key="thankyou" />
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

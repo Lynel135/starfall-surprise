@@ -72,7 +72,7 @@ const SurpriseSection = ({ onNext }: SurpriseSectionProps) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        Semua harapan dan pesan sudah terkirim! 💫
+        Semua harapan dan pesan sudah di isi. Semoga harapanmu dapat tercapai! 💫
       </motion.p>
 
       <motion.button

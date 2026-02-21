@@ -14,7 +14,7 @@ const ThankYouPage = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Terima Kasih Sudah Ada 🌙✨
+        Terima Kasih Udah Baca Sampai Akhir🌙✨
       </motion.h1>
 
       <motion.p
@@ -23,7 +23,7 @@ const ThankYouPage = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        Kehadiranmu adalah hadiah terbaik. Semoga kebahagiaan selalu menyertaimu. 💖
+      Semoga kebahagiaan selalu menyertaimu. 💖
       </motion.p>
 
       <motion.div

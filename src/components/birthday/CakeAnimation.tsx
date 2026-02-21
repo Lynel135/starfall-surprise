@@ -107,7 +107,7 @@ const CakeAnimation = ({ onComplete }: CakeAnimationProps) => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-3xl md:text-5xl font-display text-primary text-glow-gold mb-4">
-              Selamat Ulang Tahun 🎉
+              Selamat Ulang Tahun Erry 🎉
             </h1>
             <p className="text-lg md:text-xl text-foreground/80 font-body italic">
               Semoga hari ini seindah senyummu.
